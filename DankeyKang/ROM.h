@@ -38,6 +38,8 @@ public:
 	ROM();
 	ROM(std::string fileName);
 	bool Open(std::string fileName);
+	void Close();
+	void Clear();
 	void Parse();
 	uint32_t GetRomSize();
 	uint32_t GetMagic();
