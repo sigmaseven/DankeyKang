@@ -17,10 +17,11 @@ bool ROM::Open(std::string fileName)
 
 	input.seekg(0, input.beg);
 
-	for (int i = 0; i < data.size(); i++)
+	for (uint32_t i = 0; i < data.size(); i++)
 	{
 		input.read((char *)&data[i], 1);
 	}
+
 	printf("Magic: %x\n", GetMagic());
 	return true;
 }
