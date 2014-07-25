@@ -9,7 +9,11 @@ int main(int argc, char *argv[])
 {
 	ROM rom;
 	rom.Open("dkong.nes");
-	std::cout << "Rom size: " << rom.GetRomSize() << "\n";
+
+	printf("Rom size: %d\n", rom.GetRomSize());
+	printf("PRG: %d\n", rom.GetPRGBanks());
+	printf("CHR: %x\n", rom.GetCHRBanks());
+
 	if (rom.CheckMagic())
 	{
 		std::cout << "Magic check passed.\n";

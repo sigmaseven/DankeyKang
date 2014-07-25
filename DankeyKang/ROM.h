@@ -34,6 +34,8 @@ private:
 	// File stream for ROM output
 	std::ofstream output;
 
+	uint32_t index;
+
 public:
 	ROM();
 	ROM(std::string fileName);
@@ -44,4 +46,9 @@ public:
 	uint32_t GetRomSize();
 	uint32_t GetMagic();
 	bool CheckMagic();
+	void Seek(uint32_t position);
+	uint8_t GetPRGBanks();
+	uint8_t GetCHRBanks();
+	uint32_t GetPRGBankSize();
+	uint32_t GetCHRBankSize();
 };

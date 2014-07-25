@@ -81,6 +81,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="opcode.h" />
     <ClInclude Include="PRNG.h" />
     <ClInclude Include="ROM.h" />
     <ClInclude Include="stdafx.h" />
@@ -88,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DankeyKang.cpp" />
+    <ClCompile Include="opcode.cpp" />
     <ClCompile Include="PRNG.cpp" />
     <ClCompile Include="ROM.cpp" />
     <ClCompile Include="stdafx.cpp" />

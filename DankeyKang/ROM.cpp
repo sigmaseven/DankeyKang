@@ -73,3 +73,35 @@ bool ROM::CheckMagic()
 	}
 	return false;
 }
+
+void ROM::Seek(uint32_t position)
+{
+	index = position;
+}
+
+uint8_t ROM::GetPRGBanks()
+{
+	if (data.size() > 4)
+	{
+		return (uint8_t)data[4];
+	}
+	return (uint8_t)0;
+}
+
+uint8_t ROM::GetCHRBanks()
+{
+	if (data.size() > 5)
+	{
+		return(uint8_t)data[5];
+	}
+}
+
+uint32_t ROM::GetPRGBankSize()
+{
+	return GetPRGBanks() * 16384;
+}
+
+uint32_t ROM::GetCHRBankSize()
+{
+	return GetCHRBanks() * 8192;
+}
