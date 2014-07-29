@@ -81,6 +81,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Disassembler.h" />
     <ClInclude Include="opcode.h" />
     <ClInclude Include="PRNG.h" />
     <ClInclude Include="ROM.h" />

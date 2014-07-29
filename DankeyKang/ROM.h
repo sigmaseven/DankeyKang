@@ -6,19 +6,6 @@
 #include <string>
 #include <vector>
 
-struct rom_header
-{
-	char magic[4];
-	uint8_t program_entries;
-	uint8_t sprite_entries;
-	uint8_t screen_flags;
-	uint8_t system_flags;
-	uint8_t ram_size;
-	uint8_t flags_9;
-	uint8_t flags_10;
-	uint32_t reserved;
-};
-
 enum tv_encoding
 {
 	NTSC = 0x00,
