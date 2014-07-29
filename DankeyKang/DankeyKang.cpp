@@ -13,6 +13,17 @@ int main(int argc, char *argv[])
 	printf("Rom size: %d\n", rom.GetRomSize());
 	printf("PRG: %d\n", rom.GetPRGBanks());
 	printf("CHR: %x\n", rom.GetCHRBanks());
+	printf("PRG SIZE: %d\n", rom.GetPRGBankSize());
+	printf("CHR SIZE: %d\n", rom.GetCHRBankSize());
+
+	if (rom.GetEncoding() == NTSC)
+	{
+		printf("NTSC encoding.\n");
+	}
+	else
+	{
+		printf("PAL encoding.\n");
+	}
 
 	if (rom.CheckMagic())
 	{

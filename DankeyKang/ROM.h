@@ -19,6 +19,12 @@ struct rom_header
 	uint32_t reserved;
 };
 
+enum tv_encoding
+{
+	NTSC = 0x00,
+	PAL  = 0x01 
+};
+
 class ROM
 {
 private:
@@ -51,4 +57,7 @@ public:
 	uint8_t GetCHRBanks();
 	uint32_t GetPRGBankSize();
 	uint32_t GetCHRBankSize();
+	bool IsTrainerPresent();
+	bool IsBatteryPresent();
+	tv_encoding GetEncoding();
 };

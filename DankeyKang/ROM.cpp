@@ -105,3 +105,29 @@ uint32_t ROM::GetCHRBankSize()
 {
 	return GetCHRBanks() * 8192;
 }
+
+bool ROM::IsTrainerPresent()
+{
+	if (data.size() > 6)
+	{
+		return (bool)(data[6] & 0x04);
+	}
+	return false;
+}
+
+bool ROM::IsBatteryPresent()
+{
+	if (data.size() > 6)
+	{
+		return (bool)(data[6] & 0x02);
+	}
+	return false;
+}
+
+tv_encoding ROM::GetEncoding()
+{
+	if (data.size() > 9)
+	{
+		return (tv_encoding)(data[9] & 0x01);
+	}
+}
